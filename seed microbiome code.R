@@ -1,8 +1,9 @@
 #Seed microbiomes promote Astragalus mongholicus seed germination through pathogen suppression and cellulose degradation
 
-#Da Li1,2,3, Weimin Chen1*, Wen Luo1,4, Haofei Zhang1, Yang Liu1,5, Duntao Shu1* and Gehong Wei1*
+#Da Li, Weimin Chen, Wen Luo, Haofei Zhang, Yang Liu, Duntao Shu and Gehong Wei
 
-###########################αdiversity
+###########################Fig 2 
+############################αdiversity
 library(ggplot2)
 library(reshape2)
 library(vegan)
@@ -30,7 +31,7 @@ alpha <- function(x, tree = NULL, base = exp(1)) {
 }
 
 
-
+###############plot
 
 baa<-ggplot(df,aes(x = com, y = Richness,fill = germination)) +
   geom_boxplot(width = .7,show.legend = T,
@@ -134,6 +135,10 @@ occor.p = occor$p
 occor.r[occor.p>0.05|abs(occor.r)<0.6] = 0
 diag(occor.r)<-0
 occor.r
+
+
+
+
 
 ##################################Fig4C, heatmap link
 library(vegan)
